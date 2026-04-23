@@ -1,0 +1,18 @@
+// 05-kelas.cok
+kelas Hewan {
+  gawe constructor(jeneng) {
+    iki.jeneng = jeneng;
+  }
+  gawe suoro() {
+    tulis(iki.jeneng + " ngetokno suoro...");
+  }
+}
+
+kelas Kucing turunan Hewan {
+  gawe suoro() {
+    tulis(iki.jeneng + " muni: Meong!");
+  }
+}
+
+cak mpus = anyar Kucing("Mpus");
+mpus.suoro();

@@ -1,0 +1,16 @@
+// 04-fungsi.cok
+gawe sapa(jeneng) {
+  balekno "Halo " + jeneng + ", piye kabare?";
+}
+
+tulis(sapa("Galuh"));
+
+cak kuadrat = gawe-cepet (n) => n * n;
+tulis("Kuadrat teko 5:", kuadrat(5));
+
+gawe faktorial(n) {
+  lek n <= 1 { balekno 1; }
+  balekno n * faktorial(n - 1);
+}
+
+tulis("Faktorial teko 5:", faktorial(5));

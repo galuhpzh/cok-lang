@@ -1,0 +1,15 @@
+// 03-loop.cok
+muter i teko 1 nganti 5 {
+  tulis("Iterasi ke-", i);
+}
+
+cak angka = 3;
+saklawase angka > 0 {
+  tulis("Angka:", angka);
+  angka--;
+}
+
+cak list_panganan = ["Rawon", "Soto", "Pecel"];
+saben panganan teko list_panganan {
+  tulis("Mangan", panganan);
+}

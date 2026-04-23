@@ -1,0 +1,11 @@
+// 01-hello.cok
+tulis("Halo rek! Iki program pertama gawe cok-lang.");
+
+cak kutho = "Suroboyo";
+cok tahun = 2026;
+
+tulis("Jeneng kutho:", kutho);
+tulis("Tahun saiki:", tahun);
+
+kutho = "Kota Pahlawan";
+tulis("Alias:", kutho);

@@ -1,0 +1,24 @@
+// 02-kondisi.cok
+cak duit = 5000;
+cak rego_kopi = 3000;
+
+lek duit >= rego_kopi {
+  tulis("Sikat rek! Tuku kopi ndisik.");
+  duit -= rego_kopi;
+} opo-maneh {
+  tulis("Waduh, duit kurang.");
+}
+
+tulis("");
+
+cak pilihan = "kopi";
+tulis("Pilihanmu: " + pilihan);
+
+milih pilihan {
+  nek "kopi":
+    tulis("Kopi ireng!");
+    leren;
+  nek "teh":
+    tulis("Teh anget!.");
+    leren;
+}

@@ -1,0 +1,34 @@
+{
+  "name": "cok-lang",
+  "version": "0.1.0",
+  "description": "Compiler bahasa pemrograman Suroboyoan (.cok)",
+  "keywords": [
+    "suroboyoan",
+    "bahasa",
+    "compiler",
+    "language",
+    "cok",
+    "jawa"
+  ],
+  "author": "galuhpzh",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/galuhpzh/cok-lang"
+  },
+  "homepage": "https://github.com/galuhpzh/cok-lang#readme",
+  "bugs": {
+    "url": "https://github.com/galuhpzh/cok-lang/issues"
+  },
+  "main": "src/runtime.js",
+  "bin": {
+    "cok": "./bin/cok.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "test": "node test/lexer.test.js && node test/parser.test.js && node test/codegen.test.js"
+  }
+}
