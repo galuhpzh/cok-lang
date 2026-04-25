@@ -15,7 +15,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/galuhpzh/cok-lang"
+    "url": "git+https://github.com/galuhpzh/cok-lang.git"
   },
   "homepage": "https://github.com/galuhpzh/cok-lang#readme",
   "bugs": {
