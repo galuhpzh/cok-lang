@@ -42,3 +42,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: "Release ${{ github.ref_name }}"
+          allowUpdates: true
