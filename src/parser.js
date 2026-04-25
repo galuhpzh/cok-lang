@@ -659,6 +659,22 @@ export class Parser {
         const arg = this.expression();
         return { type: "AwaitExpression", argument: arg };
       }
+      if (kw === "takon") {
+        const token = this.advance();
+        this.consume(T.LPAREN, "Kudu ono '(' bar keyword takon rek.");
+        const args = [];
+        if (!this.check(T.RPAREN)) {
+          do {
+            args.push(this.expression());
+          } while (this.match(T.COMMA));
+        }
+        this.consume(T.RPAREN, "Kudu ditutup ')' rek.");
+        return {
+          type: "CallExpression",
+          callee: { type: "Identifier", value: "takon" },
+          arguments: args,
+        };
+      }
     }
     if (this.check(T.LPAREN)) {
       // Look ahead for ARROW after RPAREN to distinguish from Grouping

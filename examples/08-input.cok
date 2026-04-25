@@ -1,0 +1,14 @@
+// 08-input.cok
+tulis("Halo rek! Sopo jenengmu?");
+cak jeneng = takon("> ");
+
+tulis("Wah, jeneng sing apik rek, " + jeneng + "!");
+
+tulis("Piro umurmu saiki?");
+cak umur = takon("> ");
+
+lek umur >= 17 {
+  tulis("Sip, wis oleh nggawe SIM rek.");
+} berarti {
+  tulis("Sabar ya rek, durung cukup umur.");
+}

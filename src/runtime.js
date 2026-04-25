@@ -40,6 +40,12 @@ export class Runtime {
         Buffer,
         __dirname: path.dirname(path.resolve(filePath)),
         __filename: path.resolve(filePath),
+        takon: (promptText) => {
+          if (promptText) process.stdout.write(promptText);
+          const buffer = Buffer.alloc(1024);
+          const bytesRead = fs.readSync(0, buffer, 0, 1024);
+          return buffer.toString("utf8", 0, bytesRead).replace(/\r?\n$/, "");
+        },
       };
 
       const context = vm.createContext(contextObj);
