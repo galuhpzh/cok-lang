@@ -1,0 +1,25 @@
+// 07-eror.cok
+gawe bagi(a, b) {
+  lek b podho 0 {
+    uncal "Gak isok bagi nol rek!";
+  }
+  balekno a / b;
+}
+
+coba {
+  cak hasil = bagi(10, 0);
+  tulis("Hasil:", hasil);
+} cekel e {
+  tulis("Ono eror:", e);
+} pasti {
+  tulis("Pesen iki mesti metu rek.");
+}
+
+coba {
+  cak hasil = bagi(10, 2);
+  tulis("Hasil:", hasil);
+} cekel e {
+  tulis("Gak bakal mrene.");
+} pasti {
+  tulis("Iki pisan mesti metu.");
+}

@@ -26,7 +26,7 @@ export const KEYWORDS = {
   janji: "async",
   enteni: "await",
   coba: "try",
-  "nek-eror": "catch",
+  cekel: "catch",
   pasti: "finally",
   uncal: "throw",
   gowo: "import",
@@ -43,7 +43,6 @@ export const KEYWORDS = {
 export const MULTI_WORD_KEYWORDS = [
   "lek-gak-ngono",
   "berarti",
-  "nek-eror",
   "gak-ditetepake",
   "gak-podho"
 ];

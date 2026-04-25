@@ -391,13 +391,13 @@ export class Parser {
     const block = this.block();
 
     let handler = null;
-    if (this.check(T.KEYWORD) && this.peek().value === "nek-eror") {
+    if (this.check(T.KEYWORD) && this.peek().value === "cekel") {
       this.advance();
       const param = this.consume(
         T.IDENTIFIER,
         "Kudu nyebutno variabel eror rek.",
       ).value;
-      this.consume(T.LBRACE, "Kudu ono '{' sadurunge isi nek-eror rek.");
+      this.consume(T.LBRACE, "Kudu ono '{' sadurunge isi cekel rek.");
       const handlerBody = this.block();
       handler = { param, body: handlerBody };
     }
