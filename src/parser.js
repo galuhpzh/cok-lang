@@ -193,7 +193,7 @@ export class Parser {
       T.IDENTIFIER,
       "Kudu nyebutno sing kate digowo rek.",
     ).value;
-    this.consumeKeyword("soko", "Kudu ono 'soko' bar jeneng import rek.");
+    this.consumeKeyword("teko", "Kudu ono 'teko' bar jeneng import rek.");
     const source = this.consume(
       T.STRING,
       "Kudu nyebutno path file dadi string rek.",
@@ -272,9 +272,9 @@ export class Parser {
       if (this.peek().value === "lek-gak-ngono") {
         this.advance();
         elseBranch = [this.ifStatement()];
-      } else if (this.peek().value === "opo-maneh") {
+      } else if (this.peek().value === "berarti") {
         this.advance();
-        this.consume(T.LBRACE, "Kudu ono '{' sadurunge blok opo-maneh rek.");
+        this.consume(T.LBRACE, "Kudu ono '{' sadurunge blok berarti rek.");
         elseBranch = this.block();
       }
     }
@@ -298,7 +298,7 @@ export class Parser {
       const consequent = [];
       while (
         !this.check(T.KEYWORD) ||
-        (this.peek().value !== "nek" && this.peek().value !== "opo-maneh")
+        (this.peek().value !== "nek" && this.peek().value !== "berarti")
       ) {
         if (this.check(T.RBRACE)) break;
         consequent.push(this.declaration());
@@ -659,10 +659,46 @@ export class Parser {
         const arg = this.expression();
         return { type: "AwaitExpression", argument: arg };
       }
-      if (kw === "gawe-cepet") {
-        this.advance();
+    }
+    if (this.check(T.LPAREN)) {
+      // Look ahead for ARROW after RPAREN to distinguish from Grouping
+      let i = 1;
+      let depth = 1;
+      let foundArrow = false;
+      while (this.pos + i < this.tokens.length) {
+        const type = this.tokens[this.pos + i].type;
+        if (type === T.LPAREN) depth++;
+        if (type === T.RPAREN) depth--;
+        if (depth === 0) {
+          if (
+            this.pos + i + 1 < this.tokens.length &&
+            this.tokens[this.pos + i + 1].type === T.ARROW
+          ) {
+            foundArrow = true;
+          }
+          break;
+        }
+        i++;
+      }
+      if (foundArrow) {
         return this.arrowFunctionExpression();
       }
+    }
+
+    if (
+      this.check(T.IDENTIFIER) &&
+      this.pos + 1 < this.tokens.length &&
+      this.tokens[this.pos + 1].type === T.ARROW
+    ) {
+      const param = this.advance().value;
+      this.advance(); // consume =>
+      let body;
+      if (this.match(T.LBRACE)) {
+        body = this.block();
+      } else {
+        body = this.expression();
+      }
+      return { type: "ArrowFunctionExpression", params: [param], body };
     }
 
     if (this.match(T.IDENTIFIER)) {

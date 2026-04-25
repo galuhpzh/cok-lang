@@ -5,7 +5,7 @@ cak rego_kopi = 3000;
 lek duit >= rego_kopi {
   tulis("Sikat rek! Tuku kopi ndisik.");
   duit -= rego_kopi;
-} opo-maneh {
+} berarti {
   tulis("Waduh, duit kurang.");
 }
 

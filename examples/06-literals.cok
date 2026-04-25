@@ -1,0 +1,14 @@
+// 06-literals.cok
+cak data_kosong = gak-ono;
+cak data_undefined = gak-ditetepake;
+
+tulis("Data kosong:", data_kosong);
+tulis("Data undefined:", data_undefined);
+
+lek data_kosong podho gak-ono {
+  tulis("Iki pancen gak ono isine rek.");
+}
+
+lek data_undefined podho gak-ditetepake {
+  tulis("Iki durung ditetepake rek.");
+}

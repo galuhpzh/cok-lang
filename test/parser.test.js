@@ -45,7 +45,7 @@ runTest("Variable Declaration", "cak x = 10; cok y = 20;", [
 runTest("Function Declaration", "gawe halo(jeneng) { tulis(jeneng); }", [
   "FunctionDeclaration",
 ]);
-runTest("If Statement", "lek bener { tulis(1); } opo-maneh { tulis(0); }", [
+runTest("If Statement", "lek bener { tulis(1); } berarti { tulis(0); }", [
   "IfStatement",
 ]);
 runTest("For Range Statement", "muter i teko 1 nganti 10 { tulis(i); }", [

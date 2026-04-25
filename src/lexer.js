@@ -137,7 +137,6 @@ export class Lexer {
   readString(quote) {
     this.advance(); // consume quote
     let str = "";
-    const startLine = this.line;
     const startCol = this.col;
 
     while (this.peek() !== quote && !this.isAtEnd()) {
@@ -268,10 +267,16 @@ export class Lexer {
           return new Token(T.BOOLEAN, true, startLine, startCol);
         if (word === "salah")
           return new Token(T.BOOLEAN, false, startLine, startCol);
-        if (word === "suwong")
+        if (word === "gak-ono")
           return new Token(T.NULL, null, startLine, startCol);
-        if (word === "gak-nemokno")
+        if (word === "gak-ditetepake")
           return new Token(T.UNDEFINED, undefined, startLine, startCol);
+        if (word === "lan") return new Token(T.AND, "&&", startLine, startCol);
+        if (word === "utowo") return new Token(T.OR, "||", startLine, startCol);
+        if (word === "gak") return new Token(T.NOT, "!", startLine, startCol);
+        if (word === "podho") return new Token(T.EQ, "===", startLine, startCol);
+        if (word === "gak-podho")
+          return new Token(T.NEQ, "!==", startLine, startCol);
 
         return new Token(T.KEYWORD, word, startLine, startCol);
       }

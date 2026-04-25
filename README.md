@@ -31,12 +31,11 @@ cok halo.cok
 | `cak`            | `let`              | Deklarasi variabel yang bisa diubah    |
 | `cok`            | `const`            | Deklarasi variabel konstan             |
 | `gawe`           | `function`         | Deklarasi fungsi                       |
-| `gawe-cepet`     | `=>`               | Arrow function                         |
 | `tulis`          | `console.log`      | Cetak ke layar/terminal                |
 | `takon`          | `readline`         | Meminta input dari user                |
 | `lek`            | `if`               | Kondisi / syarat                       |
 | `lek-gak-ngono`  | `else if`          | Kondisi alternatif bertingkat          |
-| `opo-maneh`      | `else`             | Kondisi alternatif terakhir            |
+| `berarti`        | `else`             | Kondisi alternatif terakhir            |
 | `milih`          | `switch`           | Pilih berdasarkan nilai                |
 | `nek`            | `case`             | Kasus di dalam switch                  |
 | `muter`          | `for`              | Perulangan range (`teko … nganti …`)   |
@@ -49,8 +48,8 @@ cok halo.cok
 | `terus`          | `continue`         | Lanjut ke iterasi berikutnya           |
 | `bener`          | `true`             | Nilai boolean benar                    |
 | `salah`          | `false`            | Nilai boolean salah                    |
-| `suwong`         | `null`             | Nilai kosong (null)                    |
-| `gak-nemokno`    | `undefined`        | Tidak terdefinisi                      |
+| `gak-ono`        | `null`             | Nilai kosong (null)                    |
+| `gak-ditetepake` | `undefined`        | Tidak terdefinisi                      |
 | `iki`            | `this`             | Referensi objek saat ini               |
 | `kelas`          | `class`            | Deklarasi kelas                        |
 | `anyar`          | `new`              | Instansiasi objek baru                 |

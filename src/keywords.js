@@ -3,10 +3,10 @@ export const KEYWORDS = {
   cok: "const",
   bener: "true",
   salah: "false",
-  suwong: "null",
-  "gak-nemokno": "undefined",
+  "gak-ono": "null",
+  "gak-ditetepake": "undefined",
   lek: "if",
-  "opo-maneh": "else",
+  berarti: "else",
   "lek-gak-ngono": "else if",
   milih: "switch",
   nek: "case",
@@ -19,7 +19,6 @@ export const KEYWORDS = {
   teko: "from",
   nganti: "to",
   gawe: "function",
-  "gawe-cepet": "arrow",
   kelas: "class",
   anyar: "new",
   iki: "this",
@@ -43,9 +42,8 @@ export const KEYWORDS = {
 
 export const MULTI_WORD_KEYWORDS = [
   "lek-gak-ngono",
-  "opo-maneh",
-  "gawe-cepet",
+  "berarti",
   "nek-eror",
-  "gak-nemokno",
+  "gak-ditetepake",
   "gak-podho"
 ];

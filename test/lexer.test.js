@@ -40,7 +40,7 @@ runTest("Variabel sederhana", "cak x = 5", [
   { type: T.NUMBER, value: 5 },
 ]);
 
-runTest("Literal values", '"halo" bener salah suwong gak-nemokno', [
+runTest("Literal values", '"halo" bener salah gak-ono gak-ditetepake', [
   { type: T.STRING, value: "halo" },
   { type: T.BOOLEAN, value: true },
   { type: T.BOOLEAN, value: false },
@@ -48,9 +48,8 @@ runTest("Literal values", '"halo" bener salah suwong gak-nemokno', [
   { type: T.UNDEFINED, value: undefined },
 ]);
 
-runTest("Hyphenated keywords", "lek-gak-ngono gawe-cepet", [
+runTest("Hyphenated keywords", "lek-gak-ngono", [
   { type: T.KEYWORD, value: "lek-gak-ngono" },
-  { type: T.KEYWORD, value: "gawe-cepet" },
 ]);
 
 runTest("Operators", "+ - * / == === != !== && || !", [

@@ -5,7 +5,7 @@ gawe sapa(jeneng) {
 
 tulis(sapa("Galuh"));
 
-cak kuadrat = gawe-cepet (n) => n * n;
+cak kuadrat = (n) => n * n;
 tulis("Kuadrat teko 5:", kuadrat(5));
 
 gawe faktorial(n) {
