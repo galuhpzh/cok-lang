@@ -23,7 +23,7 @@
   },
   "main": "src/runtime.js",
   "bin": {
-    "cok": "./bin/cok.js"
+    "cok": "bin/cok.js"
   },
   "engines": {
     "node": ">=16.0.0"
